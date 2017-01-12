@@ -23,6 +23,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     
     let appsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         return collectionView
     }()
@@ -38,7 +39,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         appsCollectionView.dataSource = self
         appsCollectionView.register(AppCell.self, forCellWithReuseIdentifier: cellId)
         
-        addConstrainstWithFormat("H:|-8-[v0]-8-|", views: appsCollectionView)
+        addConstrainstWithFormat("H:|[v0]|", views: appsCollectionView)
         addConstrainstWithFormat("V:|[v0]|", views: appsCollectionView)
 
     }
@@ -53,7 +54,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(150, frame.width)
+        return CGSize(150, frame.height)
     }
 }
 
