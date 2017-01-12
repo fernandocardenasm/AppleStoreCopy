@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		EC280EC81E2431BD00A1A8B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC280EC71E2431BD00A1A8B3 /* AppDelegate.swift */; };
-		EC280ECA1E2431BD00A1A8B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC280EC91E2431BD00A1A8B3 /* ViewController.swift */; };
-		EC280ECD1E2431BD00A1A8B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC280ECB1E2431BD00A1A8B3 /* Main.storyboard */; };
+		EC280ECA1E2431BD00A1A8B3 /* FeaturedAppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC280EC91E2431BD00A1A8B3 /* FeaturedAppsController.swift */; };
 		EC280ECF1E2431BD00A1A8B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC280ECE1E2431BD00A1A8B3 /* Assets.xcassets */; };
-		EC280ED21E2431BD00A1A8B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC280ED01E2431BD00A1A8B3 /* LaunchScreen.storyboard */; };
+		EC3BA0FD1E255D2E00D248E6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3BA0FC1E255D2E00D248E6 /* Extensions.swift */; };
+		EC3BA0FF1E255E7E00D248E6 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3BA0FE1E255E7E00D248E6 /* CategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC280EC41E2431BD00A1A8B3 /* AppleStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC280EC71E2431BD00A1A8B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC280EC91E2431BD00A1A8B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EC280ECC1E2431BD00A1A8B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC280EC91E2431BD00A1A8B3 /* FeaturedAppsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedAppsController.swift; sourceTree = "<group>"; };
 		EC280ECE1E2431BD00A1A8B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EC280ED11E2431BD00A1A8B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC280ED31E2431BD00A1A8B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC3BA0FC1E255D2E00D248E6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EC3BA0FE1E255E7E00D248E6 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				EC280EC71E2431BD00A1A8B3 /* AppDelegate.swift */,
-				EC280EC91E2431BD00A1A8B3 /* ViewController.swift */,
-				EC280ECB1E2431BD00A1A8B3 /* Main.storyboard */,
+				EC280EC91E2431BD00A1A8B3 /* FeaturedAppsController.swift */,
 				EC280ECE1E2431BD00A1A8B3 /* Assets.xcassets */,
-				EC280ED01E2431BD00A1A8B3 /* LaunchScreen.storyboard */,
 				EC280ED31E2431BD00A1A8B3 /* Info.plist */,
+				EC3BA0FC1E255D2E00D248E6 /* Extensions.swift */,
+				EC3BA0FE1E255E7E00D248E6 /* CategoryCell.swift */,
 			);
 			path = AppleStore;
 			sourceTree = "<group>";
@@ -123,9 +123,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC280ED21E2431BD00A1A8B3 /* LaunchScreen.storyboard in Resources */,
 				EC280ECF1E2431BD00A1A8B3 /* Assets.xcassets in Resources */,
-				EC280ECD1E2431BD00A1A8B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,31 +134,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC280ECA1E2431BD00A1A8B3 /* ViewController.swift in Sources */,
+				EC280ECA1E2431BD00A1A8B3 /* FeaturedAppsController.swift in Sources */,
+				EC3BA0FD1E255D2E00D248E6 /* Extensions.swift in Sources */,
 				EC280EC81E2431BD00A1A8B3 /* AppDelegate.swift in Sources */,
+				EC3BA0FF1E255E7E00D248E6 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		EC280ECB1E2431BD00A1A8B3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC280ECC1E2431BD00A1A8B3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EC280ED01E2431BD00A1A8B3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC280ED11E2431BD00A1A8B3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EC280ED41E2431BD00A1A8B3 /* Debug */ = {
@@ -297,6 +278,7 @@
 				EC280ED81E2431BD00A1A8B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
