@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					EC280EC31E2431BC00A1A8B3 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = ZXBK6BD56X;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -239,6 +240,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZXBK6BD56X;
 				INFOPLIST_FILE = AppleStore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fernando.AppleStore;
@@ -251,6 +253,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZXBK6BD56X;
 				INFOPLIST_FILE = AppleStore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fernando.AppleStore;
