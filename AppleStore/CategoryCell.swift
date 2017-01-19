@@ -12,6 +12,14 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     
     private let cellId = "cell"
     
+    var appCategory: AppCategory? {
+        didSet {
+            if let name = appCategory?.name {
+                nameLabel.text = name
+            }
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()

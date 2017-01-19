@@ -12,6 +12,7 @@
 		EC280ECF1E2431BD00A1A8B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC280ECE1E2431BD00A1A8B3 /* Assets.xcassets */; };
 		EC3BA0FD1E255D2E00D248E6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3BA0FC1E255D2E00D248E6 /* Extensions.swift */; };
 		EC3BA0FF1E255E7E00D248E6 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3BA0FE1E255E7E00D248E6 /* CategoryCell.swift */; };
+		ECEA14DC1E30196C00491017 /* AppCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEA14DB1E30196C00491017 /* AppCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EC280ED31E2431BD00A1A8B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC3BA0FC1E255D2E00D248E6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EC3BA0FE1E255E7E00D248E6 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		ECEA14DB1E30196C00491017 /* AppCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		EC280EC61E2431BD00A1A8B3 /* AppleStore */ = {
 			isa = PBXGroup;
 			children = (
+				ECEA14DA1E30194400491017 /* Model */,
 				EC280EC71E2431BD00A1A8B3 /* AppDelegate.swift */,
 				EC280EC91E2431BD00A1A8B3 /* FeaturedAppsController.swift */,
 				EC280ECE1E2431BD00A1A8B3 /* Assets.xcassets */,
@@ -62,6 +65,14 @@
 				EC3BA0FE1E255E7E00D248E6 /* CategoryCell.swift */,
 			);
 			path = AppleStore;
+			sourceTree = "<group>";
+		};
+		ECEA14DA1E30194400491017 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECEA14DB1E30196C00491017 /* AppCategory.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC280ECA1E2431BD00A1A8B3 /* FeaturedAppsController.swift in Sources */,
+				ECEA14DC1E30196C00491017 /* AppCategory.swift in Sources */,
 				EC3BA0FD1E255D2E00D248E6 /* Extensions.swift in Sources */,
 				EC280EC81E2431BD00A1A8B3 /* AppDelegate.swift in Sources */,
 				EC3BA0FF1E255E7E00D248E6 /* CategoryCell.swift in Sources */,
