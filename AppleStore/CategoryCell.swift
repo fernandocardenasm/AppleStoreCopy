@@ -74,11 +74,16 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        if let count = appCategory?.apps?.count {
+            return count
+        }
+        
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as!AppCell
+        cell.apps = appCategory?.apps?[indexPath.item]
         return cell
     }
     
@@ -88,6 +93,19 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
 }
 
 class AppCell: UICollectionViewCell {
+    
+    var apps: App? {
+        didSet{
+            if let image = apps?.imageName {
+                imageView.image = UIImage(named: image)
+            }
+            nameLabel.text = apps?.name
+            categoryLabel.text = apps?.category
+            priceLabel.text = "$\(apps?.price)"
+            
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()

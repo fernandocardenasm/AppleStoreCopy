@@ -28,13 +28,15 @@ class AppCategory: NSObject {
         frozenApp.category = "Entertainment"
         frozenApp.price = NSNumber(value: 3.99)
         
+        bestNewAppCategory.apps = [App]()
         bestNewAppCategory.apps?.append(frozenApp)
 
         
         let bestNewGamesCategory = AppCategory()
         bestNewGamesCategory.name = "Best new Games"
         
-        
+        bestNewGamesCategory.apps = [App]()
+
         //logic
         let telepaintApp = App()
         telepaintApp.name = "Telepaint"
@@ -42,7 +44,14 @@ class AppCategory: NSObject {
         telepaintApp.category = "Games"
         telepaintApp.price = NSNumber(value: 2.99)
         
+        let starwarsApp = App()
+        starwarsApp.name = "Star Wars"
+        starwarsApp.imageName = "starwars"
+        starwarsApp.category = "Games"
+        starwarsApp.price = NSNumber(value: 5.99)
+        
         bestNewGamesCategory.apps?.append(telepaintApp)
+        bestNewGamesCategory.apps?.append(starwarsApp)
         
         
         return [bestNewAppCategory, bestNewGamesCategory]
