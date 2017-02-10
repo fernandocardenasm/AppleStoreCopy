@@ -73,16 +73,40 @@
 		EC280EC61E2431BD00A1A8B3 /* AppleStore */ = {
 			isa = PBXGroup;
 			children = (
+				EC372F041E4E0FEA007797E2 /* Controller */,
+				EC372F031E4E0FD4007797E2 /* View */,
 				ECEA14DA1E30194400491017 /* Model */,
+				EC372F051E4E100D007797E2 /* Helpers */,
 				EC280EC71E2431BD00A1A8B3 /* AppDelegate.swift */,
-				EC280EC91E2431BD00A1A8B3 /* FeaturedAppsController.swift */,
-				EC280ECE1E2431BD00A1A8B3 /* Assets.xcassets */,
 				EC280ED31E2431BD00A1A8B3 /* Info.plist */,
-				EC3BA0FC1E255D2E00D248E6 /* Extensions.swift */,
-				EC3BA0FE1E255E7E00D248E6 /* CategoryCell.swift */,
-				EC4961971E42243600307D0F /* ApiServiceDataSource.swift */,
+				EC280ECE1E2431BD00A1A8B3 /* Assets.xcassets */,
 			);
 			path = AppleStore;
+			sourceTree = "<group>";
+		};
+		EC372F031E4E0FD4007797E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC3BA0FE1E255E7E00D248E6 /* CategoryCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EC372F041E4E0FEA007797E2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC280EC91E2431BD00A1A8B3 /* FeaturedAppsController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EC372F051E4E100D007797E2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EC3BA0FC1E255D2E00D248E6 /* Extensions.swift */,
+				EC4961971E42243600307D0F /* ApiServiceDataSource.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		ECEA14DA1E30194400491017 /* Model */ = {
