@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import TRON
+import SwiftyJSON
 
 class FeaturedAppsController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
@@ -14,17 +16,32 @@ class FeaturedAppsController: UICollectionViewController, UICollectionViewDelega
     
     var appCategories: [AppCategory]?
     
+    var apiDataSource = ApiServiceDataSource()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        appCategories = AppCategory.sampleAppCategories()
+        //apiDataSource.fetchFeaturedAppsFeed()
+        
+        fetchFeaturedAppsFeed()
         
         collectionView?.backgroundColor = .white
         collectionView?.register(CategoryCell.self, forCellWithReuseIdentifier: cellId)
     }
     
+        
+    func fetchFeaturedAppsFeed() {
+        
+        ApiServiceDataSource.sharedInstance.fetchFeaturedAppsFeed { (categories) in
+            self.appCategories = categories
+            self.collectionView?.reloadData()
+        }
+    }
+    
+    
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         if let count = appCategories?.count {
             return count
         }

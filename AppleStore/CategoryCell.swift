@@ -101,7 +101,13 @@ class AppCell: UICollectionViewCell {
             }
             nameLabel.text = apps?.name
             categoryLabel.text = apps?.category
-            priceLabel.text = "$\(apps?.price)"
+            
+            if let price = apps?.price {
+                priceLabel.text = "$\(price)"
+            }
+            else {
+                priceLabel.text = ""
+            }
             
         }
     }
