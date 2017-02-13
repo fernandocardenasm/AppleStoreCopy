@@ -21,8 +21,6 @@ class FeaturedAppsController: UICollectionViewController, UICollectionViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //apiDataSource.fetchFeaturedAppsFeed()
-        
         fetchFeaturedAppsFeed()
         
         collectionView?.backgroundColor = .white
@@ -38,6 +36,10 @@ class FeaturedAppsController: UICollectionViewController, UICollectionViewDelega
         }
     }
     
+    func showAppDetailForApp(app: App){
+        let appDetailController = AppDetailController()
+        navigationController?.pushViewController(appDetailController, animated: true)
+    }
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -52,9 +54,11 @@ class FeaturedAppsController: UICollectionViewController, UICollectionViewDelega
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CategoryCell
         
         cell.appCategory = appCategories?[indexPath.item]
+        cell.featuredAppController = self
         
         return cell
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(view.frame.width - 28, 230)

@@ -11,6 +11,7 @@
 		EC280EC81E2431BD00A1A8B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC280EC71E2431BD00A1A8B3 /* AppDelegate.swift */; };
 		EC280ECA1E2431BD00A1A8B3 /* FeaturedAppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC280EC91E2431BD00A1A8B3 /* FeaturedAppsController.swift */; };
 		EC280ECF1E2431BD00A1A8B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC280ECE1E2431BD00A1A8B3 /* Assets.xcassets */; };
+		EC28999C1E51B70B005779D0 /* AppDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC28999B1E51B70B005779D0 /* AppDetailController.swift */; };
 		EC3BA0FD1E255D2E00D248E6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3BA0FC1E255D2E00D248E6 /* Extensions.swift */; };
 		EC3BA0FF1E255E7E00D248E6 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3BA0FE1E255E7E00D248E6 /* CategoryCell.swift */; };
 		EC4961981E42243600307D0F /* ApiServiceDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4961971E42243600307D0F /* ApiServiceDataSource.swift */; };
@@ -26,6 +27,7 @@
 		EC280EC91E2431BD00A1A8B3 /* FeaturedAppsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedAppsController.swift; sourceTree = "<group>"; };
 		EC280ECE1E2431BD00A1A8B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC280ED31E2431BD00A1A8B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC28999B1E51B70B005779D0 /* AppDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailController.swift; sourceTree = "<group>"; };
 		EC3BA0FC1E255D2E00D248E6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EC3BA0FE1E255E7E00D248E6 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		EC4961971E42243600307D0F /* ApiServiceDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServiceDataSource.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				EC280EC91E2431BD00A1A8B3 /* FeaturedAppsController.swift */,
+				EC28999B1E51B70B005779D0 /* AppDetailController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC280ECA1E2431BD00A1A8B3 /* FeaturedAppsController.swift in Sources */,
+				EC28999C1E51B70B005779D0 /* AppDetailController.swift in Sources */,
 				ECEA14DC1E30196C00491017 /* AppCategory.swift in Sources */,
 				EC4961981E42243600307D0F /* ApiServiceDataSource.swift in Sources */,
 				EC3BA0FD1E255D2E00D248E6 /* Extensions.swift in Sources */,

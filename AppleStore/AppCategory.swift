@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import TRON
+import SwiftyJSON
 
 struct AppCategory{
     
@@ -15,6 +17,7 @@ struct AppCategory{
     var type: String?
     
     var apps: [App]?
+    
     
 }
 
@@ -25,6 +28,14 @@ struct App {
     var category: String?
     var imageName: String?
     var price: NSNumber?
+    
+    init(json: JSON){
+        self.id = json["Id"].number
+        self.name = json["Name"].string
+        self.category = json["Category"].string
+        self.imageName = json["ImageName"].string
+        self.price = json["Price"].number
+    }
     
 }
 

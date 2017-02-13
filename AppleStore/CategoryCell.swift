@@ -12,6 +12,8 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     
     private let cellId = "cell"
     
+    var featuredAppController: FeaturedAppsController?
+    
     var appCategory: AppCategory? {
         didSet {
             if let name = appCategory?.name {
@@ -22,6 +24,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+//        featuredAppController = FeaturedAppsController()
         setupViews()
     }
     
@@ -85,6 +88,13 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as!AppCell
         cell.apps = appCategory?.apps?[indexPath.item]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let app = appCategory?.apps?[indexPath.item] {
+            featuredAppController?.showAppDetailForApp(app: app)
+        }
+    
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

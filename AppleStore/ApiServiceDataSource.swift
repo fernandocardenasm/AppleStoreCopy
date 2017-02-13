@@ -25,8 +25,6 @@ class HomeFeatured: JSONDecodable {
         
         for category in arrayCategories {
             
-            var categoryAux = AppCategory()
-            
             guard let nameCategory = category["name"].string else {
                 throw SerializationError.missing("nameCategory")
             }
@@ -43,23 +41,11 @@ class HomeFeatured: JSONDecodable {
             
             for app in appsCategory {
                 
-                var appAux = App()
-                
-                appAux.id = app["Id"].number
-                appAux.name = app["Name"].string
-                appAux.category = app["Category"].string
-                appAux.imageName = app["ImageName"].string
-                appAux.price = app["Price"].number
-                                
-                appsCategoryAux.append(appAux)
+                appsCategoryAux.append(App(json: app))
                 
             }
             
-            categoryAux.name = nameCategory
-            categoryAux.type = typeCategory
-            categoryAux.apps = appsCategoryAux
-            
-            appCategories?.append(categoryAux)
+            appCategories?.append(AppCategory(name: nameCategory, type: typeCategory, apps: appsCategoryAux))
             
         }
         
@@ -90,7 +76,6 @@ struct ApiServiceDataSource {
             if let categories = homeDataSource.appCategories {
                 completion(categories)
             }
-            //self.appCategories = homeDataSource.appCategories
             
         }) { (err) in
             print("Failed to fetch...", err)
